@@ -20,7 +20,13 @@
    * 
    */
   var imageset = function(nodeList) {
+    if (!nodeList.length) {
+      nodeList = [nodeList];
+    }
     
+    for (var i = 0, j = nodeList.length; i < j; i++) {
+      convert(nodeList[i]);
+    }
   };
   
   
